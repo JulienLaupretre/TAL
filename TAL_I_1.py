@@ -9,7 +9,9 @@ fileOut = open("pos_test.txt", "w")
 for line in lines:
     # print(line)
     word = line.split("\t")
-    print(word)
-    fileOut.write(word[0] + " ")
-
+    # print(word)
+    if (word[0] == "\n"):
+        fileOut.write(word[0])
+    else:
+        fileOut.write(word[0] + " ")
 fileOut.close()
